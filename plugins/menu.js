@@ -284,7 +284,7 @@ const listMessage = {
   footer: '📮 *Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner',
   mentions: await conn.parseMention(tek),
   title: `${htki} *LIST MENU* ${htka}`,
-  buttonText: `CLICK HERE ⎙`, 
+  buttonText: `CLICK HERE`, 
   sections
 }
   if (teks == '404') {
@@ -490,22 +490,12 @@ const listMessage = {
             pageCount: fpagedoc,
             caption: text,
             footer: titlebot + '\n By Wh-Mods-Dev',
-            templateButtons: [
-                {
-                    quickReplyButton: {
-                        displayText: 'Owner',
-                        id: '.owner'
-                    }
-                },
-                {
-                    quickReplyButton: {
-                        displayText: 'Donasi',
-                        id: '.donasi'
-                    }
-                },
-            ]
-        }
-        //await conn.sendMessage(m.chat, message, m, { mentionedJid: [m.sender] })
+            templateButtons: `CLICK HERE`, 
+            sections
+}
+  if (teks == '404') {
+  	return conn.sendMessage(m.chat, listMessage, { quoted: m, mentions: await conn.parseMention(tek), contextInfo:{ forwardingScore: 99999, isForwarded: true }})
+    }
         
     //------------------- BUTTON VID
     //conn.sendButton(m.chat, text, wm, 'https://youtu.be/3ONnszQtwz0', [['Ping', '.speed'],['Owner', '.owner'],['Donasi', '.donasi']],ftoko, { gifPlayback: true, contextInfo: { externalAdReply: {title: namebot, body: bottime, sourceUrl: sig, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})
