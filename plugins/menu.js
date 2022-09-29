@@ -220,18 +220,25 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
     let mpt = clockString(_mpt)
       const sections = [
    {
-	title: `${htki} MAIN ${htka}`,
+	title: `${htki} About Me ${htka}`,
 	rows: [
-	    {title: `⚡ ${pmenus} SPEED BOT`, rowId: ".speed", description: "Menampilkan kecepatan respon BOT"},
-	    {title: `💌 ${pmenus} OWNER BOT`, rowId: ".owner", description: "Menampilkan List owner BOT"},
-	    {title: `📔 ${pmenus} SCRIPT BOT`, rowId: ".sc", description: `Source Code ${namebot}`},
+	    {title: ` ${pmenus} Owner`, rowId: ".? owner", description: "Menampilkan kecepatan respon BOT"},
+	    {title: ` ${pmenus} Info`, rowId: ".? info", description: "Menampilkan List owner BOT"},
+	    {title: ` ${pmenus} Script Bot`, rowId: ".sc", description: `Source Code`},
 	]
     },{
 	title: `${htki} SUPPORT ${htka}`,
 	rows: [
-	    {title: `🔖 ${pmenus} SEWA`, rowId: ".sewa", description: "Menampilkan list harga sewa BOT"},
-	    {title: `🌟 ${pmenus} BUY PREMIUM`, rowId: ".premium", description: "Menampilkan list harga premium"},
-	    {title: `💹 ${pmenus} DONASI`, rowId: ".donasi", description: 'Support BOT agar lebih fast respon'},
+	    {title: ` ${pmenus} SEWA`, rowId: ".sewa", description: "Menampilkan list harga sewa BOT"},
+	    {title: ` ${pmenus} BUY PREMIUM`, rowId: ".premium", description: "Menampilkan list harga premium"},
+	    {title: ` ${pmenus} DONASI`, rowId: ".donasi", description: 'Support BOT agar lebih fast respon'},
+	]
+	},{
+        title: `${htki} Anonymous Chat ${htka}`,
+	rows: [
+	    {title: ` ${pmenus} Anonymous Chats`, rowId: ".? anonymous", description: "Menampilkan list harga sewa BOT"},
+	    {title: ` ${pmenus} BUY PREMIUM`, rowId: ".premium", description: "Menampilkan list harga premium"},
+	    {title: ` ${pmenus} DONASI`, rowId: ".donasi", description: 'Support BOT agar lebih fast respon'},
 	]
 	},{
 	title: `${htki} MENU ${htka}`,
