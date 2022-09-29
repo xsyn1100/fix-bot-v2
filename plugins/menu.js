@@ -10,6 +10,9 @@ const defaultMenu = {
   before: `
 %dash
 Hello %name
+
+Saya adalah bot whatsapp dengab berbagai fitur berguna.
+Silahkan klik button dibawah ini untuk melihat commands.
 %m3
 
 %m1 *I N F O  C M D* 
