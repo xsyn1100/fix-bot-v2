@@ -38,12 +38,7 @@ global.snh = '_'
 
 /*============== PAYMENT ==============*/
 global.pdana = '085793462823' //dana
-global.povo = '08XXXXXXXXXX' //ovo
-global.pgopay = '08XXXXXXXXXX' //gopay
-global.plinkaja = '08XXXXXXXXXX' //link aja
 global.ppulsa = '085793462823' //Indosat
-global.ppulsa2 = '08XXXXXXXXXX' // kalau ada kartu lain isi aja
-global.psaweria = 'https://saweria.com/mrw4h1d'
 
 /*============== NOMOR ==============*/
 global.nomorbot = '6283178478701'
@@ -112,7 +107,7 @@ global.APIKeys = { // APIKey Here
 global.wm = '                Syn-Bot' //Main Watermark
 global.wm2 = 'Syn-Bot'
 global.wm3 = '⫹⫺ Syn-Bot '
-global.botdate = `⫹⫺ DATE: ${week} ${date}\n⫹⫺ 𝗧𝗶𝗺𝗲: ${wktuwib}`
+global.botdate = `Powered by Syn`
 global.bottime = `T I M E : ${wktuwib}`
 global.titlebot = `⫹⫺ WhatsApp Bot | By im.donn`
 global.author = '                「 Syn-Bot 」'
@@ -180,8 +175,8 @@ global.htki = '' // Hiasan Titile (KIRI)
 global.htka = '' // Hiasan Title  (KANAN)
 global.lopr = 'Ⓟ' //LOGO PREMIUM ON MENU.JS
 global.lolm = 'Ⓛ' //LOGO LIMIT/FREE ON MENU.JS
-global.htjava = '⫹⫺'    //hiasan Doang :v
-global.hsquere = ['⛶','❏','⫹⫺']
+global.htjava = ''    //hiasan Doang :v
+global.hsquere = ['','','']
 
 /*============== STICKER WM ==============*/
 global.stickpack = 'Syn-Bot'
