@@ -27,7 +27,7 @@ let wibh = moment.tz('Asia/Jakarta').format('HH')
     })
       
     
-/* Media sosial:*/
+/*============== SOCIAL ==============*/
 
 // kalo ga punya ketik "-" atau biarin aja biar ada creditsnya :v
 global.sig = 'https://instagram.com/doni.ramdhn'
@@ -36,7 +36,7 @@ global.sgc = '_'
 global.sdc = '-' //discord
 global.snh = '_' 
 
-*• PAYMENT*
+/*============== PAYMENT ==============*/
 global.pdana = '085793462823' //dana
 global.povo = '08XXXXXXXXXX' //ovo
 global.pgopay = '08XXXXXXXXXX' //gopay
