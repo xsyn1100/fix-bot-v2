@@ -1,6 +1,5 @@
 import instagramGetUrl from 'instagram-url-direct'
 let text = `
-let text = `
 Contoh: .ig https://www.instagram.com/p/CH1A1c9J5pY/?utm_medium=copy_link
 `.trim()
   m.reply(text)
