@@ -9,35 +9,7 @@ import fetch from 'node-fetch'
 const defaultMenu = {
   before: `
 %dash
-%m1 *U S E R*
-%m2 *Name:* %name
-%m2 *Tag:* %tag
-%m2 *Status:* %prems
-%m2 *Limit:* %limit
-%m2 *Money:* %money
-%m2 *Role:* %role
-%m2 *Level:* %level [ %xp4levelup Xp For Levelup]
-%m2 *Xp:* %exp / %maxexp
-%m2 *Total Xp:* %totalexp
-%m3
-
-%m1 *T O D A Y*
-%m2 *%ucpn*
-%m2 *Days:* %week %weton
-%m2 *Date:* %date
-%m2 *Islamic Date:* %dateIslamic
-%m2 *Time:* %wib
-%m3
-
-%m1 *I N F O*
-%m2 *Bot Name:* %me
-%m2 *Mode:* %mode
-%m2 *Platform:* %platform
-%m2 *Type:* Node.Js
-%m2 *Baileys:* Multi Device
-%m2 *Prefix:* [ *%_p* ]
-%m2 *Uptime:* %muptime
-%m2 *Database:* %rtotalreg dari %totalreg
+Hello %name
 %m3
 
 %m1 *I N F O  C M D* 
@@ -236,9 +208,16 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	},{
         title: `${htki} Anonymous Chat ${htka}`,
 	rows: [
-	    {title: ` ${pmenus} Anonymous Chats`, rowId: ".? anonymous", description: "Menampilkan list harga sewa BOT"},
-	    {title: ` ${pmenus} Tebak Lagu`, rowId: ".? tebaklagu", description: "Menampilkan list harga premium"},
-	    {title: ` ${pmenus} Instagram`, rowId: ".? ig", description: 'Support BOT agar lebih fast respon'},
+	    {title: ` ${pmenus} Anonymous Chats`, rowId: ".? anonymous", description: "chat dengan orang random dibot"},
+	    {title: ` ${pmenus} Tebak Lagu`, rowId: ".? tebaklagu", description: "game tebak lagu"},
+	    {title: ` ${pmenus} Fun`, rowId: ".? Fun", description: 'Fitur yang aman untuk keluarga'},
+	]
+	},{
+        title: `${htki} Menu Download ${htka}`,
+	rows: [
+	    {title: ` ${pmenus} Facebook`, rowId: ".? facebook", description: "download video dari link facebook"},
+	    {title: ` ${pmenus} Instagram`, rowId: ".? ig", description: "download video/foto/story dari link instagram"},
+	    {title: ` ${pmenus} Tiktok`, rowId: ".? tiktok", description: 'download video dari link tiktok tanpa wm'},
 	]
 	},{
 	title: `${htki} MENU ${htka}`,
@@ -276,27 +255,24 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 
 let usrs = db.data.users[m.sender]
 let tek = `*${ucapan()} ${conn.getName(m.sender)}*
-┌–––––––––––––––––✥
-│「 Hai Kak👋 」
-└┬❖ 「 ${conn.getName(m.sender)} 」
-┌┤❀  Bagaimana Harimu? 😄
-┊│❀  Terima Kasih Telah Menggunakan Bot Kami
-│└────────────┈ ⳹
-┊   「 *U s e r  I n f o 克* 」
+Hai Kak👋
+ ${conn.getName(m.sender)} 
+ Bagaimana Harimu? 
+ Terima Kasih Telah Menggunakan Bot Kami
+ 
 ┊↬✗• *ɴᴀᴍᴇ:* ${usrs.registered ? usrs.name : conn.getName(m.sender)}
 ┊↬✗• *ᴛᴀɢs:* @${m.sender.split`@`[0]}
 ┊↬✗• *sᴛᴀᴛᴜs:* ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
 ┊↬✗• *ᴘʀᴇᴍɪᴜᴍ:* ${usrs.premiumTime > 1 ? 'Yes': 'No'}
-┗–––––––––––––––––✥
-┌–––––––––––––––––✥
-┊   「 *S t a t u s  I n f o 比* 」
+
+ • Status info 
 ┊↬✗• *ᴜᴘᴛɪᴍᴇ:* ${mpt}
 ┊↬✗• *ᴛɪᴍᴇ:* ${moment.tz('Asia/Jakarta').format('HH')} H  ${moment.tz('Asia/Jakarta').format('mm')} M  ${moment.tz('Asia/Jakarta').format('ss')} S
 ┊↬✗• *ᴜsᴇʀs:* ${Object.keys(global.db.data.users).length}
 ┊↬✗• *ʟɪᴍɪᴛ:* ${usrs.limit}
 ┊↬✗• *ʟᴇᴠᴇʟ:* ${usrs.level}
 ┊↬✗• *ʀᴏʟᴇ:* ${usrs.role}${usrs.premiumTime > 1 ? `
-┗––––––––––––––––––✥
+
 ┊↬✗• *ᴇxᴘɪʀᴇᴅ ᴘʀᴇᴍɪᴜᴍ:*
 ${clockStringP(usrs.premiumTime - new Date())}` : ''}
 `
@@ -513,27 +489,9 @@ const listMessage = {
             footer: titlebot + '\n By Wh-Mods-Dev',
             templateButtons: [
                 {
-                    urlButton: {
-                        displayText: `SUBSCRIBE`,
-                        url: 'https://www.youtube.com/channel/UCMx4e8anOq_Olt2nMSv0Cow'
-                    }
-                },
-                {
-                    urlButton: {
-                        displayText: 'Group Official',
-                        url: sgc
-                    }
-                },
-                {
                     quickReplyButton: {
                         displayText: 'Owner',
                         id: '.owner'
-                    }
-                },
-                {
-                    quickReplyButton: {
-                        displayText: 'Speed',
-                        id: '.speed'
                     }
                 },
                 {
