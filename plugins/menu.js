@@ -238,7 +238,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	rows: [
 	    {title: ` ${pmenus} Anonymous Chats`, rowId: ".? anonymous", description: "Menampilkan list harga sewa BOT"},
 	    {title: ` ${pmenus} Tebak Lagu`, rowId: ".? tebaklagu", description: "Menampilkan list harga premium"},
-	    {title: ` ${pmenus} DONASI`, rowId: ".donasi", description: 'Support BOT agar lebih fast respon'},
+	    {title: ` ${pmenus} Instagram`, rowId: ".? ig", description: 'Support BOT agar lebih fast respon'},
 	]
 	},{
 	title: `${htki} MENU ${htka}`,
